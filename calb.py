@@ -114,7 +114,6 @@ def projet(fname):
         print corners2.shape, objp.shape
 
         # Find the rotation and translation vectors.
-        xxx = cv2.solvePnPRansac(objp, corners2, mtx, dist)
         retx ,_rvecs, _tvecs, inliers = cv2.solvePnPRansac(objp, corners2, mtx, dist)
 
         # project 3D points to image plane
